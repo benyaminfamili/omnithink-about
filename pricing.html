@@ -162,21 +162,21 @@
 
         <section>
           <h2>What one question costs us</h2>
-          <p>When you ask a question, it is sent to all five models at the same moment. Every token each model reads and writes is billed to us at that provider's published API rate. A typical question is about <strong>800 tokens in</strong> (your question plus any active Answer Modes) and <strong>600 tokens out</strong> per model. At the current rates (verified September&nbsp;2026):</p>
+          <p>When you ask a question, it is sent to all five models at the same moment. Every token each model reads and writes is billed to us at that provider's published API rate. A typical question is about <strong>800 tokens in</strong> (your question plus any active Answer Modes) and <strong>600 tokens out</strong> per model. At the current rates (verified September&nbsp;2026, current model generation):</p>
 
           <div class="cost-tablewrap">
             <table class="cost-table">
               <tr><th>Model</th><th>Provider</th><th class="num">Input /1M</th><th class="num">Output /1M</th><th class="num">Per answer</th></tr>
-              <tr><td>ChatGPT (GPT-5.6)</td><td>OpenAI</td><td class="num">$4.00</td><td class="num">$20.00</td><td class="num">$0.0152</td></tr>
-              <tr><td>Claude (Opus 5)</td><td>Anthropic</td><td class="num">$5.00</td><td class="num">$25.00</td><td class="num">$0.0190</td></tr>
+              <tr><td>ChatGPT (GPT-6)</td><td>OpenAI</td><td class="num">$2.00</td><td class="num">$10.00</td><td class="num">$0.0076</td></tr>
+              <tr><td>Claude (Opus 5.5)</td><td>Anthropic</td><td class="num">$4.00</td><td class="num">$20.00</td><td class="num">$0.0152</td></tr>
               <tr><td>Gemini (3.1 Pro)</td><td>Google</td><td class="num">$2.00</td><td class="num">$12.00</td><td class="num">$0.0088</td></tr>
-              <tr><td>Grok (4.6)</td><td>xAI</td><td class="num">$2.00</td><td class="num">$6.00</td><td class="num">$0.0052</td></tr>
-              <tr><td>DeepSeek (V4.1 Flash)</td><td>DeepSeek</td><td class="num">$0.30</td><td class="num">$1.20</td><td class="num">$0.0010</td></tr>
-              <tr class="total"><td colspan="4">All five models, one question</td><td class="num">≈ $0.049</td></tr>
+              <tr><td>Grok (4.7)</td><td>xAI</td><td class="num">$2.00</td><td class="num">$6.00</td><td class="num">$0.0052</td></tr>
+              <tr><td>DeepSeek (Flash, V4.1)</td><td>DeepSeek</td><td class="num">$0.30</td><td class="num">$1.20</td><td class="num">$0.0010</td></tr>
+              <tr class="total"><td colspan="4">All five models, one question</td><td class="num">≈ $0.038</td></tr>
             </table>
           </div>
 
-          <p>Running <strong>Compare</strong> or <strong>Aggregate</strong> afterwards is a sixth call — Claude reads all five answers (≈4,800 tokens in, 800 out) and synthesises them: about <strong>$0.044</strong> more. So a full session — five models plus a Compare — costs us roughly <strong>9&nbsp;cents</strong> in raw AI fees. Answer Modes lengthen the input; multi-round Debate re-sends the growing transcript each round and can cost several times more per question.</p>
+          <p>Running <strong>Compare</strong>, <strong>Verdict</strong> or <strong>Meta-Answer</strong> afterwards is a sixth call — Claude reads all five answers (≈4,800 tokens in, 800 out) and synthesises them: about <strong>$0.035</strong> more. So a full session — five models plus a Compare — costs us roughly <strong>7&nbsp;cents</strong> in raw AI fees. Answer Modes lengthen the input; multi-round Debate re-sends the growing transcript each round and can cost several times more per question.</p>
         </section>
 
         <section>
