@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18338473982"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18338473982');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OmniThink Pricing, Explained — Full Cost Transparency</title>
+  <meta name="description" content="What OmniThink actually costs to run — per-question AI API fees across five models, infrastructure, payment fees — and exactly how the Plus ($7.99) and Pro ($14.99) prices are derived. No hidden margin." />
+  <link rel="icon" type="image/png" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="canonical" href="https://about.omnithink.io/pricing.html" />
+  <meta name="theme-color" content="#08080c" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="OmniThink" />
+  <meta property="og:url" content="https://about.omnithink.io/pricing.html" />
+  <meta property="og:title" content="OmniThink Pricing, Explained" />
+  <meta property="og:description" content="Line by line: what one question costs across five AI models, what the infrastructure costs, and how the $7.99 and $14.99 prices are derived. No hidden margin." />
+  <meta property="og:image" content="https://about.omnithink.io/omnithink-logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="OmniThink Pricing, Explained" />
+  <meta name="twitter:description" content="What it actually costs to answer one question with five AI models — and how OmniThink's prices are derived from it." />
+  <meta name="twitter:image" content="https://about.omnithink.io/omnithink-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="omnithink.css" />
+  <style>
+    .legal-page {
+      padding: 140px 0 96px;
+      background: var(--bg-2);
+      min-height: 100vh;
+    }
+    .legal-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    .legal-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--muted); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+      margin-bottom: 32px;
+      transition: var(--transition);
+    }
+    .legal-back:hover { color: var(--indigo); }
+    .legal-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--indigo);
+      background: rgba(99,102,241,0.08);
+      padding: 6px 12px; border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .legal-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; line-height: 1.15;
+      color: var(--text); margin: 0 0 12px;
+    }
+    .legal-meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 40px; }
+    .legal-prose {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: clamp(28px, 4vw, 56px);
+    }
+    .legal-prose p, .legal-prose li { color: var(--text); font-size: 1rem; line-height: 1.75; }
+    .legal-prose p { margin: 0 0 16px; }
+    .legal-prose strong { color: var(--text); font-weight: 600; }
+    .legal-prose section { margin-top: 44px; }
+    .legal-prose section:first-of-type { margin-top: 0; }
+    .legal-prose h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem; font-weight: 700; line-height: 1.3;
+      color: var(--text); margin: 0 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-prose h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem; font-weight: 600; color: var(--text);
+      margin: 28px 0 12px;
+    }
+    .legal-prose ul { padding-left: 22px; margin: 0 0 16px; }
+    .legal-prose ul li { margin-bottom: 8px; }
+    .legal-prose a {
+      color: var(--indigo); text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(99,102,241,0.3);
+    }
+    .legal-prose a:hover { text-decoration-color: var(--indigo); }
+    .legal-copyright { color: var(--muted); font-size: 0.85rem; text-align: center; margin-top: 40px; }
+
+    /* Cost tables */
+    .cost-tablewrap { overflow-x: auto; margin: 20px 0; border: 1px solid var(--border); border-radius: 12px; }
+    .cost-table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+    .cost-table th {
+      text-align: left; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); font-weight: 700; padding: 10px 14px;
+      background: var(--bg-3); border-bottom: 1px solid var(--border); white-space: nowrap;
+    }
+    .cost-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    .cost-table tr:last-child td { border-bottom: none; }
+    .cost-table td.num, .cost-table th.num {
+      text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap;
+      font-family: 'Space Grotesk', monospace;
+    }
+    .cost-table tr.total td { font-weight: 700; background: rgba(99,102,241,0.06); }
+    .cost-callout {
+      border-left: 3px solid var(--indigo);
+      background: rgba(99,102,241,0.07);
+      padding: 14px 18px; margin: 20px 0; border-radius: 0 10px 10px 0;
+      color: var(--text); font-size: 0.98rem; line-height: 1.7;
+    }
+  </style>
+</head>
+<body class="theme-omnithink">
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="omnithink-logo.png" alt="OmniThink" class="logo-img" style="height:34px;width:auto;border-radius:8px;" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how">How It Works</a></li>
+        <li><a href="index.html#pricing" aria-current="page">Pricing</a></li>
+        <li><a href="index.html#founders">Founders</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="legal-page">
+    <div class="legal-wrap">
+      <a href="index.html" class="legal-back">
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Back to OmniThink
+      </a>
+      <span class="legal-eyebrow">OmniThink</span>
+      <h1 class="legal-title">Pricing, Explained</h1>
+      <p class="legal-meta">What you pay, what it actually costs, and why. Not a sales page — just the numbers.</p>
+
+      <article class="legal-prose">
+
+        <section>
+          <h2>Why we show you this</h2>
+          <p>Most software companies hide their costs. They don't want you to know the margin, or how much the AI APIs actually cost, or how much of your subscription goes to cloud infrastructure versus the vendor's pocket. Opacity is the default, and it is usually intentional.</p>
+          <p>We do the opposite. This page shows, line by line, what it costs to run OmniThink — the AI API bills, the infrastructure, the payment fees — and exactly how the prices are derived from those costs. We do it because we think you deserve to know, and because the only way to ask for your support honestly is to first show you what you are supporting.</p>
+        </section>
+
+        <section>
+          <h2>What one question costs us</h2>
+          <p>When you ask a question, it is sent to all five models at the same moment. Every token each model reads and writes is billed to us at that provider's published API rate. A typical question is about <strong>800 tokens in</strong> (your question plus any active Answer Modes) and <strong>600 tokens out</strong> per model. At the current rates (verified September&nbsp;2026):</p>
+
+          <div class="cost-tablewrap">
+            <table class="cost-table">
+              <tr><th>Model</th><th>Provider</th><th class="num">Input /1M</th><th class="num">Output /1M</th><th class="num">Per answer</th></tr>
+              <tr><td>ChatGPT (GPT-5.6)</td><td>OpenAI</td><td class="num">$4.00</td><td class="num">$20.00</td><td class="num">$0.0152</td></tr>
+              <tr><td>Claude (Opus 5)</td><td>Anthropic</td><td class="num">$5.00</td><td class="num">$25.00</td><td class="num">$0.0190</td></tr>
+              <tr><td>Gemini (3.1 Pro)</td><td>Google</td><td class="num">$2.00</td><td class="num">$12.00</td><td class="num">$0.0088</td></tr>
+              <tr><td>Grok (4.6)</td><td>xAI</td><td class="num">$2.00</td><td class="num">$6.00</td><td class="num">$0.0052</td></tr>
+              <tr><td>DeepSeek (V4.1 Flash)</td><td>DeepSeek</td><td class="num">$0.30</td><td class="num">$1.20</td><td class="num">$0.0010</td></tr>
+              <tr class="total"><td colspan="4">All five models, one question</td><td class="num">≈ $0.049</td></tr>
+            </table>
+          </div>
+
+          <p>Running <strong>Compare</strong> or <strong>Aggregate</strong> afterwards is a sixth call — Claude reads all five answers (≈4,800 tokens in, 800 out) and synthesises them: about <strong>$0.044</strong> more. So a full session — five models plus a Compare — costs us roughly <strong>9&nbsp;cents</strong> in raw AI fees. Answer Modes lengthen the input; multi-round Debate re-sends the growing transcript each round and can cost several times more per question.</p>
+        </section>
+
+        <section>
+          <h2>What it costs to keep the lights on</h2>
+          <p>Behind every question there is production infrastructure running continuously, whether anyone is using it or not:</p>
+          <div class="cost-tablewrap">
+            <table class="cost-table">
+              <tr><th>Component</th><th class="num">Monthly</th></tr>
+              <tr><td>API backend, security gateway, cache, database, CDN, monitoring, key vault (Azure)</td><td class="num">$62–102</td></tr>
+              <tr><td>Analytics, email, domains, certificates</td><td class="num">$8–13</td></tr>
+              <tr class="total"><td>Baseline before a single question is asked</td><td class="num">≈ $70–115</td></tr>
+            </table>
+          </div>
+          <p>Plus payment processing (Stripe keeps 2.9% + $0.30 of every charge: 53¢ of a Plus payment, 73¢ of a Pro payment) and tax on revenue.</p>
+        </section>
+
+        <section>
+          <h2>The plans, and how the prices were derived</h2>
+          <div class="cost-tablewrap">
+            <table class="cost-table">
+              <tr><th>Plan</th><th class="num">Price</th><th class="num">Frontier answers</th><th>Who it's for</th></tr>
+              <tr><td>Guest</td><td class="num">$0</td><td class="num">15 / day</td><td>Try it with zero friction — no account.</td></tr>
+              <tr><td>Free account</td><td class="num">$0</td><td class="num">100 / month</td><td>Occasional use, full feature access.</td></tr>
+              <tr><td><strong>Plus</strong></td><td class="num"><strong>$7.99 / mo</strong></td><td class="num">400 / month</td><td>Regular use across all five models.</td></tr>
+              <tr><td><strong>Pro</strong></td><td class="num"><strong>$14.99 / mo</strong></td><td class="num">800 / month</td><td>Daily serious use; double the headroom.</td></tr>
+            </table>
+          </div>
+
+          <p>First, the unit. Since July 2026 we meter the fairest way we know: <strong>one answer = one model's reply, and you are charged exactly the answers you request.</strong> Ask all five models and that's 5 answers; ask one and it's 1 — lighter questions stretch your plan further. A Compare or Meta-answer costs 1; a Debate costs one per model per round plus the conclusion. (When another service advertises thousands of "messages," check whether they mean one reply from one lightweight model. Every Omnithink answer is a frontier model.)</p>
+
+          <p>The derivation is straightforward, and now it closes. Take Pro: of $14.99, Stripe takes $0.73 and we provision 15% for tax, leaving about <strong>$12</strong>. A subscriber who burns the entire 800-answer quota costs about <strong>$9 in AI fees</strong>. Plans are sized to a published rule — <strong>even at 100% utilization, at least a 20% margin must remain</strong> — because the earlier versions of this page had to admit that a maxed-out subscriber cost more than they paid, with the founder absorbing the difference. That is no longer true: the margin funds the infrastructure above and the free tiers below, and there is still no hidden multiple on top — the whole formula is on this page.</p>
+
+          <p>The same holds for Plus at its 400-answer scale (about a 22% margin at full burn). Free tiers are funded by the paid ones: a free account costs us at most about a dollar a month, and a guest a few cents a day — that is the marketing budget, spent on you trying the product instead of on ads.</p>
+
+          <p>Past your plan there's no wall: <strong>Omnis</strong>, our prepaid coins, cover overflow. 100 Omnis = $1; an answer burns its real AI cost × 4, stated exactly that plainly in the app. They never expire, you can earn them free (signing up, referrals, promos), and subscriptions remain the better per-answer deal — Omnis price flexibility, not loyalty.</p>
+
+          <div class="cost-callout">
+            <strong>Until July 2026 the price was $2.99.</strong> At that price a typical engaged subscriber cost roughly $17–20 a month to serve — the founder personally absorbed the difference. The re-pricing didn't add margin padding; it moved the price from far below cost to approximately at cost. Existing $2.99 subscribers were grandfathered: they keep their price and the full Pro quota (now 800 answers/month) for as long as their subscription stays active.
+          </div>
+
+          <h3>Compared with subscribing directly</h3>
+          <div class="cost-tablewrap">
+            <table class="cost-table">
+              <tr><th>What you could pay instead</th><th class="num">Monthly</th></tr>
+              <tr><td>ChatGPT Plus + Claude Pro + Gemini Advanced, separately</td><td class="num">$60</td></tr>
+              <tr><td>OmniThink Plus — all five models, side by side</td><td class="num">$7.99</td></tr>
+              <tr><td>OmniThink Pro — all five models, double quota</td><td class="num">$14.99</td></tr>
+            </table>
+          </div>
+          <p>The catch, stated honestly: those direct subscriptions include unlimited-ish chat with one model. OmniThink gives you a monthly budget of questions answered by <em>all five at once</em>, with Compare, Debate, and 46 Answer Modes on top. Different shape, radically lower price for what it does.</p>
+        </section>
+
+        <section>
+          <h2>Fair use, and what keeps this sustainable</h2>
+          <ul>
+            <li><strong>One quota pool.</strong> Your plan's monthly quota is shared between the OmniThink app and partner apps that use your account — one subscription, one pool.</li>
+            <li><strong>Personal use only.</strong> No automation, scripting, or resale. Quotas and rate limits enforce this technically, not just contractually.</li>
+            <li><strong>Bounded answers.</strong> Model responses are capped at generous lengths so a single request can't consume unbounded compute.</li>
+            <li><strong>We eat price changes first.</strong> When providers change API prices (OpenAI doubled theirs in April 2026), we update this page and absorb the difference until a considered re-pricing — we don't silently degrade the product.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>The bottom line</h2>
+          <div class="cost-tablewrap">
+            <table class="cost-table">
+              <tr><th>Item</th><th class="num">Number</th></tr>
+              <tr><td>One five-model question (5 answers)</td><td class="num">≈ $0.049</td></tr>
+              <tr><td>Full session with Compare</td><td class="num">≈ $0.09</td></tr>
+              <tr><td>Serving a Pro who burns all 800 answers — AI + infra share + fees + tax</td><td class="num">≈ $12 / mo</td></tr>
+              <tr><td>What that subscriber pays</td><td class="num">$14.99 / mo</td></tr>
+              <tr><td>Margin at 100% utilization — a published floor, not a hidden multiple</td><td class="num">≥ 20%</td></tr>
+            </table>
+          </div>
+          <p>The math is honest. The price is real. If you use OmniThink regularly and find it valuable, subscribing is the most direct way to say: <em>this should continue to exist.</em></p>
+          <p><a href="index.html#pricing">See the plans →</a></p>
+        </section>
+
+        <p class="legal-copyright">Rates verified against provider price lists July 2026. This page is updated whenever provider pricing, infrastructure costs, or the plans change. © 2025–2026 Belvantis. All rights reserved.</p>
+      </article>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

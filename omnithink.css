@@ -1,0 +1,377 @@
+/* =============================================
+   OMNITHINK — Dark / Violet theme override.
+   Loaded AFTER ../style.css. Applies only when
+   <body class="theme-omnithink"> is present.
+   ============================================= */
+
+body.theme-omnithink {
+  --ot-bg:        #0b0b10;
+  --ot-surface:   #15151b;
+  --ot-surface-2: #1c1c24;
+  --ot-card:      #1a1a22;
+  --ot-card-hi:   #21212a;
+  --ot-border:    rgba(255, 255, 255, 0.08);
+  --ot-border-hi: rgba(255, 255, 255, 0.14);
+  --ot-text:      #f3f3f5;
+  --ot-text-soft: #c9c9d3;
+  --ot-muted:     #8b8b97;
+
+  --ot-violet:       #8b5cf6;
+  --ot-violet-deep:  #7c3aed;
+  --ot-violet-light: #a78bfa;
+  --ot-pink:         #d946ef;
+
+  --ot-emerald: #10b981;
+  --ot-blue:    #3b82f6;
+  --ot-coral:   #e07b5e;
+  --ot-indigo:  #6366f1;
+  --ot-slate:   #2a2a35;
+  --ot-teal:    #14b8a6;
+  --ot-orange:  #f97316;
+
+  --ot-rainbow: linear-gradient(90deg, #ef4444 0%, #f97316 22%, #eab308 45%, #84cc16 70%, #10b981 100%);
+  --ot-violet-grad: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+  --ot-violet-deep-grad: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+
+  /* Overrides for base style.css tokens */
+  --bg:      var(--ot-bg);
+  --bg-2:    var(--ot-surface);
+  --bg-3:    var(--ot-surface-2);
+  --bg-card: var(--ot-card);
+  --border:  var(--ot-border);
+  --text:    var(--ot-text);
+  --muted:   var(--ot-muted);
+  --indigo:  var(--ot-violet);
+  --indigo-dark: var(--ot-violet-deep);
+  --sky:     var(--ot-violet-light);
+  --shadow:    0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.5), 0 24px 64px rgba(0,0,0,0.45);
+
+  background: var(--ot-bg);
+  color: var(--ot-text);
+}
+
+/* ---------- Gradients ---------- */
+body.theme-omnithink .gradient-text {
+  background: var(--ot-violet-grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+/* ---------- Nav ---------- */
+body.theme-omnithink #navbar {
+  background: rgba(11, 11, 16, 0.78);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+}
+body.theme-omnithink #navbar.scrolled {
+  border-bottom-color: var(--ot-border);
+  box-shadow: 0 1px 16px rgba(0,0,0,0.6);
+}
+body.theme-omnithink .nav-links a { color: var(--ot-text-soft); }
+body.theme-omnithink .nav-links a:hover,
+body.theme-omnithink .nav-links a[aria-current="page"] { color: #fff; }
+body.theme-omnithink .menu-toggle span { background: var(--ot-text); }
+
+/* ---------- Section backgrounds ---------- */
+body.theme-omnithink .hero,
+body.theme-omnithink .product,
+body.theme-omnithink .about,
+body.theme-omnithink .founder {
+  background: var(--ot-bg);
+}
+
+/* ---------- Section tag pill ---------- */
+body.theme-omnithink .section-tag {
+  color: var(--ot-violet-light);
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.28);
+}
+body.theme-omnithink .section-title { color: #fff; }
+body.theme-omnithink .section-subtitle { color: var(--ot-muted); }
+
+/* ---------- Buttons ---------- */
+body.theme-omnithink .btn-primary {
+  background: var(--ot-violet-grad);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.32);
+}
+body.theme-omnithink .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(139, 92, 246, 0.42);
+}
+body.theme-omnithink .btn-secondary {
+  background: var(--ot-card);
+  color: var(--ot-text);
+  border-color: var(--ot-border);
+  box-shadow: none;
+}
+body.theme-omnithink .btn-secondary:hover {
+  background: var(--ot-card-hi);
+  border-color: var(--ot-border-hi);
+  transform: translateY(-2px);
+}
+
+/* ---------- Product hero ---------- */
+body.theme-omnithink .product-hero {
+  background: var(--ot-surface);
+  border: 1px solid var(--ot-border);
+  position: relative;
+  overflow: hidden;
+}
+body.theme-omnithink .product-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(600px 320px at 12% -20%, rgba(139, 92, 246, 0.20), transparent 60%),
+    radial-gradient(500px 280px at 90% 110%, rgba(217, 70, 239, 0.16), transparent 65%);
+  pointer-events: none;
+}
+body.theme-omnithink .product-hero > * { position: relative; z-index: 1; }
+
+body.theme-omnithink .product-name {
+  background: var(--ot-violet-grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+body.theme-omnithink .product-tagline { color: #fff; }
+body.theme-omnithink .product-subtitle { color: var(--ot-violet-light); }
+body.theme-omnithink .product-desc { color: var(--ot-text-soft); }
+
+/* ---------- Stats row ---------- */
+body.theme-omnithink .stat-item {
+  background: var(--ot-card);
+  border: 1px solid var(--ot-border);
+}
+body.theme-omnithink .stat-num {
+  background: var(--ot-violet-grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+body.theme-omnithink .stat-label { color: var(--ot-muted); }
+
+/* ---------- Problem block ---------- */
+body.theme-omnithink .problem-block {
+  background: var(--ot-card);
+  border: 1px solid var(--ot-border);
+}
+body.theme-omnithink .problem-block h3 { color: #fff; }
+body.theme-omnithink .problem-block p { color: var(--ot-text-soft); }
+body.theme-omnithink .workflow-step {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+body.theme-omnithink .workflow-cost {
+  background: rgba(239, 68, 68, 0.10);
+  border: 1px dashed rgba(239, 68, 68, 0.35);
+  color: #fca5a5;
+}
+body.theme-omnithink .problem-quote {
+  background: rgba(139, 92, 246, 0.06);
+  border-left-color: var(--ot-violet);
+  color: var(--ot-text-soft);
+}
+
+/* Model strength chips — match the in-app model chip colors */
+body.theme-omnithink .model-strengths { gap: 12px; }
+body.theme-omnithink .model-tag {
+  background: var(--ot-card-hi);
+  border: 1px solid var(--ot-border);
+  color: var(--ot-text);
+  border-radius: 999px;
+  padding: 8px 18px;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+body.theme-omnithink .model-tag::before {
+  content: '';
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--ot-muted);
+}
+body.theme-omnithink .model-tag strong { color: #fff; margin-right: 4px; font-weight: 600; }
+body.theme-omnithink .model-tag:nth-child(1)::before { background: var(--ot-emerald); box-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
+body.theme-omnithink .model-tag:nth-child(2)::before { background: var(--ot-coral);   box-shadow: 0 0 12px rgba(224, 123, 94, 0.6); }
+body.theme-omnithink .model-tag:nth-child(3)::before { background: var(--ot-blue);    box-shadow: 0 0 12px rgba(59, 130, 246, 0.6); }
+body.theme-omnithink .model-tag:nth-child(4)::before { background: var(--ot-violet);  box-shadow: 0 0 12px rgba(139, 92, 246, 0.6); }
+body.theme-omnithink .model-tag:nth-child(5)::before { background: #f5f5f5;          box-shadow: 0 0 12px rgba(255, 255, 255, 0.4); }
+
+/* ---------- How it works block ---------- */
+body.theme-omnithink .how-block {
+  background: var(--ot-card);
+  border: 1px solid var(--ot-border);
+}
+body.theme-omnithink .how-title { color: #fff; }
+body.theme-omnithink .how-desc { color: var(--ot-text-soft); }
+body.theme-omnithink .how-step strong { color: #fff; }
+body.theme-omnithink .how-step p { color: var(--ot-muted); }
+body.theme-omnithink .step-num {
+  background: var(--ot-violet-grad);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+}
+
+/* ---------- Feature cards: rainbow border accents like the in-app boxes ---------- */
+body.theme-omnithink .feature-card {
+  background: var(--ot-card);
+  border: 1px solid var(--ot-border);
+  position: relative;
+  overflow: hidden;
+}
+body.theme-omnithink .feature-card:hover { background: var(--ot-card-hi); }
+body.theme-omnithink .feature-card h4 { color: #fff; }
+body.theme-omnithink .feature-card p { color: var(--ot-text-soft); }
+
+body.theme-omnithink .feature-card.accent-indigo  { border-top: 2px solid var(--ot-violet); }
+body.theme-omnithink .feature-card.accent-sky     { border-top: 2px solid var(--ot-teal);   }
+body.theme-omnithink .feature-card.accent-emerald { border-top: 2px solid var(--ot-emerald);}
+body.theme-omnithink .feature-card.accent-violet  { border-top: 2px solid var(--ot-orange); }
+body.theme-omnithink .feature-card.accent-indigo::after,
+body.theme-omnithink .feature-card.accent-sky::after,
+body.theme-omnithink .feature-card.accent-emerald::after,
+body.theme-omnithink .feature-card.accent-violet::after {
+  content: '';
+  position: absolute; inset: -1px;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(160px 120px at 0% 0%, rgba(139, 92, 246, 0.10), transparent 70%);
+}
+
+/* ---------- Who it's for ---------- */
+body.theme-omnithink .who-card {
+  background: var(--ot-card);
+  border: 1px solid var(--ot-border);
+}
+body.theme-omnithink .who-card:hover { background: var(--ot-card-hi); }
+body.theme-omnithink .who-card h4 { color: #fff; }
+body.theme-omnithink .who-card p { color: var(--ot-text-soft); }
+body.theme-omnithink .who-title { color: #fff; }
+
+/* ---------- Pricing ---------- */
+body.theme-omnithink .pricing-title { color: #fff; }
+body.theme-omnithink .pricing-sub { color: var(--ot-muted); }
+body.theme-omnithink .pricing-card {
+  background: var(--ot-card);
+  border: 1px solid var(--ot-border);
+}
+body.theme-omnithink .pricing-card-pro {
+  border-color: var(--ot-violet);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.10), rgba(217, 70, 239, 0.06));
+}
+body.theme-omnithink .pricing-badge {
+  background: var(--ot-violet-grad);
+}
+body.theme-omnithink .pricing-tier { color: var(--ot-violet-light); }
+body.theme-omnithink .pricing-price { color: #fff; }
+body.theme-omnithink .pricing-price span { color: var(--ot-muted); }
+body.theme-omnithink .pricing-note { color: var(--ot-muted); }
+body.theme-omnithink .pricing-features li { color: var(--ot-text-soft); }
+body.theme-omnithink .pricing-features li::before { color: var(--ot-emerald); }
+
+/* ---------- CTA strip — uses the rainbow gradient (the app's "Auto-mode" accent) ---------- */
+body.theme-omnithink .cta-strip {
+  background: var(--ot-rainbow);
+  position: relative;
+  overflow: hidden;
+}
+body.theme-omnithink .cta-strip::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.32) 100%);
+  pointer-events: none;
+}
+body.theme-omnithink .cta-strip > * { position: relative; z-index: 1; }
+body.theme-omnithink .cta-strip h3 { color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.4); }
+body.theme-omnithink .cta-strip p  { color: rgba(255,255,255,0.92); }
+body.theme-omnithink .cta-strip .btn-primary {
+  background: #fff;
+  color: #0b0b10;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+body.theme-omnithink .cta-strip .btn-primary:hover {
+  background: #f5f5f5;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.45);
+}
+
+/* ---------- Legal line ---------- */
+body.theme-omnithink .product-legal-line { color: var(--ot-muted); }
+body.theme-omnithink .product-legal-line a {
+  color: var(--ot-violet-light);
+  text-decoration-color: rgba(167, 139, 250, 0.4);
+}
+body.theme-omnithink .product-legal-line a:hover { text-decoration-color: var(--ot-violet-light); }
+
+/* ---------- Footer ---------- */
+body.theme-omnithink .footer { background: #08080c; color: var(--ot-text-soft); }
+body.theme-omnithink .footer .footer-tagline { color: var(--ot-muted); }
+body.theme-omnithink .footer .footer-col h4 { color: #fff; }
+body.theme-omnithink .footer .footer-col a { color: var(--ot-muted); }
+body.theme-omnithink .footer .footer-col a:hover { color: #fff; }
+body.theme-omnithink .footer .footer-bottom { border-top-color: var(--ot-border); }
+body.theme-omnithink .footer .footer-bottom p,
+body.theme-omnithink .footer .footer-bottom a { color: var(--ot-muted); }
+body.theme-omnithink .footer .footer-bottom a:hover { color: #fff; }
+body.theme-omnithink .footer .footer-social a {
+  background: var(--ot-card);
+  border: 1px solid var(--ot-border);
+  color: var(--ot-text-soft);
+}
+body.theme-omnithink .footer .footer-social a:hover {
+  background: var(--ot-violet);
+  border-color: var(--ot-violet);
+  color: #fff;
+}
+
+/* ---------- App Store badge (keep crisp on dark) ---------- */
+body.theme-omnithink .app-store-badge { box-shadow: 0 6px 18px rgba(0,0,0,0.4); }
+
+/* ---------- Code/legal pages ---------- */
+body.theme-omnithink code {
+  background: var(--ot-card-hi);
+  color: var(--ot-violet-light);
+  border: 1px solid var(--ot-border);
+}
+
+/* ---------- Google Play badge (keep visible on dark) ---------- */
+body.theme-omnithink .play-badge {
+  border: 1px solid var(--ot-border);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+/* ---------- Four pricing tiers ---------- */
+@media (min-width: 1025px) {
+  body.theme-omnithink .pricing-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- Founders (multi-card grid) ---------- */
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+.founder-card.compact {
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding: 40px 32px;
+}
+.founder-card.compact .founder-photo-wrap { max-width: 160px; margin: 0 auto 24px; }
+.founder-card.compact .founder-links { justify-content: center; }
+body.theme-omnithink .founder-card {
+  background: var(--ot-card);
+  border: 1px solid var(--ot-border);
+  box-shadow: var(--shadow);
+}
+body.theme-omnithink .founder-photo-fallback {
+  background: var(--ot-violet-grad);
+}
+body.theme-omnithink .founder-link.linkedin {
+  background: rgba(10, 102, 194, 0.14);
+  border-color: rgba(10, 102, 194, 0.3);
+  color: #6cb2ef;
+}
+body.theme-omnithink .founder-link.linkedin:hover { background: rgba(10, 102, 194, 0.22); }
+body.theme-omnithink .founder-link.pending {
+  background: var(--ot-card-hi);
+  border: 1px dashed var(--ot-border-hi);
+  color: var(--ot-muted);
+  cursor: default;
+}
+@media (max-width: 1024px) {
+  .founders-grid { grid-template-columns: 1fr; }
+}
