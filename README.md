@@ -14,10 +14,10 @@ deploy pipeline, independent of the Belvantis site.
 
 ## Founders
 
-Three founder cards live in `index.html` under `#founders`: Benyamin (real LinkedIn
-linked), Nika and Shahab (placeholder `.founder-link.pending` — swap the `href="#"`
-for their LinkedIn URLs and drop in `founder-nika.jpg` / `founder-shahab.jpg` photos
-when available; same fallback-initial pattern as Benyamin's card).
+Three founder cards live in `index.html` under `#founders`, all filled in: Benyamin
+(`founder-benyamin.jpg`), Nika Nikousokhan (`founder-nika.png`), and Shahab Afshar
+(`founder-shahab.png`), each linking to their real LinkedIn profile. Photos are
+square crops taken from their LinkedIn profile photos.
 
 ## Local preview
 
@@ -29,6 +29,16 @@ python3 -m http.server 8080
 ## Deploy
 
 GitHub Actions → Azure Static Web Apps (`.github/workflows/azure-static-web-apps.yml`),
-same mechanism as the `belvantis` repo. Needs the `AZURE_STATIC_WEB_APPS_API_TOKEN`
-repo secret once the Azure Static Web App resource exists — see the runbook handed
-over in chat for exact `az` commands and the DNS CNAME target.
+same mechanism as the `belvantis` repo (`skip_app_build: true`, plain static files,
+no build step). Push to `main` auto-deploys.
+
+**Live infra** (see `docs/07-azure-deployment-guide.md` in the `omnithink` repo for
+the full writeup):
+- Azure Static Web App: `omnithink2-about-prod`, resource group `omnithink2`, Free tier
+- Custom domain: `about.omnithink.io`, DNS-only CNAME at Cloudflare → the SWA's
+  `defaultHostname`, validated via `az staticwebapp hostname set` (managed cert, no
+  separate TXT record needed for a subdomain)
+- GitHub secret `AZURE_STATIC_WEB_APPS_API_TOKEN` is set from
+  `az staticwebapp secrets list --name omnithink2-about-prod -g omnithink2`
+
+This site makes no API calls, so it needed no backend, CORS, or Entra changes.
