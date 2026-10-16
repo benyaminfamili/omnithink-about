@@ -8,7 +8,7 @@ deploy pipeline, independent of the Belvantis site.
 
 | Path             | Purpose                                      |
 | ---------------- | --------------------------------------------- |
-| `/index.html`    | Full product page: hero, features, how it works, pricing summary, founders |
+| `/index.html`    | Full product page: hero, features, how it works, pricing summary, founders, "the thinking behind this" philosophy note |
 | `/pricing.html`  | Full cost-transparency breakdown              |
 | `/privacy.html`  | Privacy policy (OmniThink is a Belvantis product — legal entity unchanged) |
 
